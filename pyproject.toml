@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vidnotes"
+version = "0.1.0"
+description = "Summarize video courses and YouTube videos into Markdown notes using Claude."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "alexlym" }]
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    "playwright>=1.40.0",
+    "yt-dlp>=2024.1.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "PyYAML>=6.0.0",
+]
+
+[project.scripts]
+vidnotes = "vidnotes.cli:app"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "responses>=0.25.0"]
+
+[tool.setuptools.packages.find]
+include = ["vidnotes*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not integration'"

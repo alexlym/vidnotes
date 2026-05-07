@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# Local config override (use config.toml.example as the template)
+config.toml
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Output directories
+output/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
