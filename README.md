@@ -175,6 +175,20 @@ YouTube and course-summary prompts are built-in and not yet user-configurable.
 
 ---
 
+## Adding features (for contributors)
+
+This project uses a spec-driven workflow — every feature starts as a spec before any code is written.
+
+With [Claude Code](https://claude.ai/code) open in this repo, run:
+
+```
+/sdd-feature <feature-name>
+```
+
+This creates `specs/features/<feature-name>/` with four files: `plan.md`, `requirements.md`, `validation.md`, and `tests.md`. Fill in the plan and tests, get a review, then implement. See `CLAUDE.md` for the full workflow.
+
+---
+
 ## Roadmap
 
 - `vidnotes transcripts` — browse all cached transcripts across courses
